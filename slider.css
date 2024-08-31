@@ -1,0 +1,54 @@
+*,*::after, *::before 
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.box {
+   
+    background: #000;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 3px
+}
+
+.carousel {
+    max-width: 80rem;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow:column;
+    grid-auto-columns: calc((100% / 5) - 12px);
+    gap: 16px;
+    overflow-x: hidden;
+}
+
+.carousel .card
+{
+    /* margin: 1rem; */
+    width: 240px;
+    height: 342px; 
+    background-color: rgb(242, 220, 245);
+    border-radius: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 12px);
+    overflow-x: hidden;
+
+    }
+}
